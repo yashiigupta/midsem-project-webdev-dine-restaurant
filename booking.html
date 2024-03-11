@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Dine Website Challenge</title>
+</head>
+<body>
+  <section class="hero-booking-section">
+    <div class="hero-booking-text">
+      <a href="./index.html"><img src="./images/logo.svg" alt="dine"></a>
+      
+        <div>
+          <h1 class="hero-booking-subtitle">Reservations</h1>
+          <p class="hero-booking-paragraph">
+            We can’t wait to host you. If you have any special requirements please feel free to 
+            call on the phone number below. We’ll be happy to accommodate you.
+          </p>
+          <button class="hero-booking-button button-active">Reserve Place</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="form-section">
+      <div class="form-container">
+      <form action="#" class="booking-form shadow" id="booking-form">
+        <div id="name-input-container">
+          <input type="text" name="name" id="name" placeholder="Name">
+          <small id="name-error-text">This field is required</small>
+        </div>
+
+        <div id="email-input-container">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <small id="email-error-text">This field is required</small>
+        </div>
+        <br>
+        
+        <div class="form-flex-container" id="date-input-container">
+          <p class="flex-heading date-heading" id="date-heading">Pick a date</p>
+          <small id="date-error-text">This field is incomplete</small>
+          <div class="form-date">
+            <input type="number" name="month" id="month" placeholder="MM">
+            <input type="number" name="day" id="day" placeholder="DD">
+            <input type="number" name="year" id="year" placeholder="YYYY">
+          </div>
+        </div>
+          <br>
+        <div class="form-flex-container time-container" id="time-input-container">
+        <p class="flex-heading" id="time-heading">Pick a time</p>
+        <small id="time-error-text">This field is incomplete</small>
+        <div class="form-time">
+          <input type="number" name="hours" id="hours" placeholder="09">
+          <input type="number" name="minutes" id="minutes" placeholder="00">
+          <select name="dayNight" id="dayNight">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+
+        <div class="guests">
+          <button id="minus-guest-button">-</button>
+          <p><span id="guest-number">4</span> people</p>
+          <button id="plus-guest-button">+</button>
+        </div>
+          <button class="reservation-button button-active" id="open-popup">Make Reservation</button>
+      </form>
+    </div>
+    <img src="./images/patterns/pattern-lines.svg" alt="Six horizontal stripes" class="form-stripes" />
+  </section>
+
+  <div id="popup" class="popup-container">
+    <div class="popup">
+      <span class="close-btn">&times;</span>
+      <h2>Reservation Confirmed</h2>
+      <p id="name"></p>
+      <p id="date"></p>
+      <p id="time"></p>
+      <p id="people"></p>
+      <p id="email"></p>
+    </div>
+  </div>
+
+  
+  <footer>
+    <div class="footer-container"> 
+      <div class="footer-logo">
+        <img src="./images/logo.svg" alt="dine logo"/>
+      </div>
+      <div class="footer-text">
+
+        <p >
+          Marthwaite, Sedbergh
+          <br>
+          Cumbria
+          <br>
+          +00 44 123 4567
+        </p>
+        <p >
+          Open Times
+          <br>
+          Mon - Fri: 09:00 AM - 10:00 PM
+          <br>
+          Sat - Sun: 09:00 AM - 11:30 PM
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="./booking.js">
+  </script>
+</body>
+</html>
